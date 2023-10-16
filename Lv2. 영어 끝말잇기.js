@@ -3,7 +3,8 @@ function solution(n, words) {
   const dict = {};
   let last_char = words[0][0];
   let idx = 0;
-  for (word of words) {
+
+  for (let word of words) {
     if (word in dict || last_char !== word[0]) {
       answer = [(idx % n) + 1, Math.floor(idx / n) + 1];
       break;
